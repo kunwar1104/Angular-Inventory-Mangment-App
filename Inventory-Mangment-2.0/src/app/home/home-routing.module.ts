@@ -11,7 +11,6 @@ import { CatagoryUpdateComponent } from './catagory-update/catagory-update.compo
 import { AuthGuard } from '../Services/auth.guard';
 import { BrandAddComponent } from './brand-add/brand-add.component';
 import { CategoryAddComponent } from './category-add/category-add.component';
-import { ProductUpdateComponent } from 'Angular-Inventory-Mangment-App/src/app/dashboard/product-update/product-update.component';
 import { ProdutUpdateComponent } from './produt-update/produt-update.component';
 
   console.log("home module is here")
@@ -54,36 +53,8 @@ const routes: Routes = [
    }
    
 
-
-
    ]
-  //  {path: ""}
 },
-// {
-//   path: 'brand', component: BrandComponent,
-
-// },
-
-
-
-//  {path: 'brand', component: BrandComponent,
-//  canActivate: [AuthGuard]},
-
-//  {path: 'brand-update/:id', component: BrandUpdateComponent,
-//  canActivate: [AuthGuard] },
-
-//  {path: 'add-product', component: AddProductComponent,  
-//  canActivate: [AuthGuard]},
-
-//  {path: 'product-list', component: ProductListComponent,
-//  canActivate: [AuthGuard]},
-
-//  {path: 'product-update', component: ProductUpdateComponent, 
-//   canActivate: [AuthGuard]},
-//  {path: 'category', component: CategoryComponent, 
-//   canActivate: [AuthGuard]},
-//  {path: 'catagory-update/:id', component: CatagoryUpdateComponent, 
-//  canActivate: [AuthGuard]},
 
 ] 
 

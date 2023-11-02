@@ -58,6 +58,6 @@ export class ProdutUpdateComponent {
       setTimeout(() => {
         this.updatedMessage = 'Updated successful'
       }, 3000)
-      this.router.navigate(['home/produt-list'])
+      this.router.navigate(['home/produts-list'])
     }
 }
