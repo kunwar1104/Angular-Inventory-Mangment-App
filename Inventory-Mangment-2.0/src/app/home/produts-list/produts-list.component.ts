@@ -52,6 +52,7 @@ export class ProdutsListComponent {
     },3000)
    }
 
+   
    list() {                                             // here we make this function for refrash the page after 
     this.product.productList().subscribe((result) =>{   // the delete some product than updated page may show 
       console.log("list result =",result)
