@@ -1,0 +1,18 @@
+<div class="add-product">
+    <h1 class="title">Update Catagory</h1>
+    <p class="error" >{{updatedMessage}}</p>
+    <form #catagoryData="ngForm" className="commen-form" (ngSubmit)="submit(catagoryData.value)">
+        <!-- <input class="form-input" ngModel="{{productData?.name}}" type="text" name="name" placeholder="Enter Product Name" > -->
+        <!-- <input class="form-input" ngModel="{{productData?.price}}"  name="price" placeholder="Enter Product Price"> -->
+       <input class="form-input" type="text" ngModel="{{productData?.category}}"  name="category"  placeholder="Please Enter Catagory" #category="ngModel"  required="category" >
+       <span class="invalid-input" *ngIf="category.invalid && (category.dirty || category.touched)" >Please Enter Valid Catagory</span>
+
+        <!-- <input class="form-input" ngModel="{{productData?.category}}"  name="color" placeholder="Enter Product Color"> -->
+        <!-- <textarea class="form-input" ngModel="{{productData?.description}}"  name="description" placeholder="Enter Product Description"></textarea> -->
+        <!-- <input class="form-input" ngModel="{{productData?.image}}"  name="image" placeholder="Enter Product Image"> -->
+        <button class="btn btn-outline-success" type="submit" [disabled]="catagoryData.invalid">
+            <span class=" spinner-border text-primary" role="status" *ngIf="sending"></span>
+                {{sending ? 'please wait ' : 'Update Catagory' }}
+        </button>
+    </form>
+</div>

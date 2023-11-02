@@ -1,0 +1,40 @@
+ <div class="user-auth"> 
+    <div class="user">
+        
+    <h1 class="title">Login</h1>
+    <div class="message">
+        <p *ngIf=" apiResponse.code==500" class="text-danger">{{apiResponse.response.message}}</p>  <!--ahi error api ma thi avshw  --> 
+      </div>
+      <span *ngIf="loginMessage" class="alert">{{message}}</span>
+    
+    <form class="commen-form form-control" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+
+        <input type="text" class="form-control" class="form-input" name="username" #username="ngModel" placeholder="Enter User Name" required  ngModel>
+        <span class="invalid-input" *ngIf="username.invalid && (username.dirty || username.touched)" >Please Enter Valid Name</span>
+
+        <input type="password" class="form-input" name="password" #password="ngModel" placeholder="Enter User Password" required   ngModel>
+        <span class="invalid-input"  *ngIf="password.invalid && (password.dirty || password.touched)">Please Enter Valid Password</span>
+
+        <button type="submit" class="form-button " [disabled]="loginForm.invalid" >
+            
+                <!-- <span
+                 class=" spinner-border   text-primary " role="status"   
+                *ngIf="sending" > 
+                </span> -->
+                <span
+                class=" spinner-border   text-primary " role="status"   
+               *ngIf="sending" > 
+               </span>
+
+                <!-- <span class=" spinner-border text-primary " role="status" ></span> -->
+                          {{sending ? 'please wait' : 'login'}}&#8230;
+                         <!-- <div [ngClass]="{'loader-hidden': !show }">  
+                            <div class="loading" >Loading&#8230;</div> 
+                         </div> -->
+                <!-- </div> -->
+            </button>
+    </form>
+    </div>
+</div> 
+
+

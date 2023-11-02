@@ -1,0 +1,33 @@
+.add-product{
+    display: flex;
+    justify-content: center;
+    margin-top: -450px;
+    z-index: 99999;
+    position: relative;
+}
+.brand-title{
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+}
+.invalid-input{
+    color: red;
+    font-weight: bold;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif
+}
+
+.comman-form{
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+  
+}
+.input-brand{
+    border-radius: 5px;
+}

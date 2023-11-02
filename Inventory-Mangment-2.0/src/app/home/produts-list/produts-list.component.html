@@ -1,0 +1,81 @@
+<div class="product-list">
+    <h1 class="title">Product List</h1>
+    <div class="pro-list">
+        <!-- Brand name khali Show karavanu che -->
+
+        <p class="delete-message">{{productMessage}}</p>
+
+               
+        <div class="mat-elevation-z8">
+
+          <div class="position-relative">
+            <button class="btn btn-primary position-absolute  end-0 " routerLink="/home/add-product/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+              </svg>
+              Add Product</button>
+           </div>
+
+            <mat-form-field>
+              <mat-label>Filter</mat-label>
+              <input matInput placeholder="Search" (keyup)="Filterchange($event)">
+             </mat-form-field>
+            <table mat-table matSort [dataSource]="dataSource"  >
+              
+                <!-- id Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell mat-sort-header  *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+    
+                <!-- Catagory Column -->
+                <ng-container matColumnDef="category">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef> Catagory </th>
+                    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+                  </ng-container>
+
+                  <!-- Catagory Price -->
+                <ng-container matColumnDef="price">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef> Price </th>
+                    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                  </ng-container>
+
+                  <!-- Catagory Discription -->
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef> description </th>
+                    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                  </ng-container>
+              
+                <!-- image Column -->
+                <ng-container matColumnDef="image">
+                  <th mat-header-cell mat-sort-header *matHeaderCellDef class="image"> image </th>
+                  <td mat-cell *matCellDef="let element">
+                    <div class="main-image">
+                     <img [src]="element.image" alt="Image" class="image"/>  
+                    </div>
+                  </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef>Action </th>
+                    <td mat-cell *matCellDef="let element">
+                       <button mat-raised-button routerLink="/home/produt-update/{{element.id}}">Edit</button> 
+                      | <button mat-raised-button color="warn" 
+                       (click)="confirmDelete(element.id)" >Delete</button> </td>''
+                  </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons ></mat-paginator>
+          </div>
+  
+    </div>
+</div>
+<!-- </div> -->

@@ -1,0 +1,54 @@
+.add-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 310px;
+    z-index: 99999;
+    position: relative;
+    // transform: translateY(-130%);
+    margin-top: -550px;
+
+}
+.commen-form{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // margin: auto;
+    margin-top: 100px;
+}
+.form-input, button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    width: 250px;
+    border-radius: 5px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif
+}
+
+.error{
+    // display: flex;
+    // justify-content: center;
+    color: green;
+    font-size: 40px;
+    font-weight: bold;
+}
+.invalid-input{
+    color: red;
+    font-weight: bold;
+}
+.btn button:disabled{
+    cursor: not-allowed;
+}
+
+

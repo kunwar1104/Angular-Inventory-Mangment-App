@@ -1,0 +1,28 @@
+<div class="add-product">
+    <h1 class="title">Update Product</h1>
+    <p class="error" >{{updatedMessage}}</p>
+    <form #catagoryData="ngForm" className="commen-form" (ngSubmit)="submit(catagoryData.value)">
+        <input class="form-input" ngModel="{{productData?.name}}" type="text" name="name" placeholder="Enter Product Brand" #name="ngModel" required="name">
+        <span class="invalid-input" name="name" *ngIf="name.invalid && (name.dirty || name.touched)">Please Enter Valid Brand</span>
+
+        <input class="form-input" ngModel="{{productData?.price}}"  name="price" placeholder="Enter Product Price" #price="ngModel" required="price"> 
+        <span class="invalid-input" name="price" *ngIf="price.invalid && (price.dirty || price.touched)">Please Enter Valid Price</span>
+
+        <input class="form-input" type="text" ngModel="{{productData?.category}}"  name="category"  placeholder="Please Enter Catagory"
+        #category="ngModel"  required>
+        <span class="invalid-input" *ngIf="category.invalid && (category.dirty || category.touched)" >Please Enter Valid Catagory</span> 
+
+        <input class="form-input" ngModel="{{productData?.color}}"  name="color" placeholder="Enter Product Color" #color="ngModel" required="color" >
+        <span class="invalid-input" *ngIf="color.invalid && (color.dirty || color.touched)" >Please Enter Valid Color</span> 
+
+        <textarea class="form-input" ngModel="{{productData?.description}}"  name="description" placeholder="Enter Product Description"></textarea>
+ 
+        <input class="form-input" ngModel="{{productData?.image}}"  name="image" placeholder="Enter Product Image" #image="ngModel" required="image"> 
+        <span class="invalid-input" *ngIf="image.invalid && (image.dirty || image.touched)" >Please Enter Valid Image</span> 
+ 
+        <button class="btn btn-outline-success" type="submit" [disabled]="catagoryData.invalid">
+            <span class=" spinner-border text-primary" role="status" *ngIf="sending"></span>
+                {{sending ? 'please wait ' : 'Update Product' }}
+        </button>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+<!-- <div [class.loader-hidden]="!show"> -->
+<!-- <div [ngClass]="{'loader-hidden': !show }">  
+    <div class="loading" >Loading&#8230;</div>
+    
+ </div> -->
+<!-- </div> -->
+
+<!-- <button (click)="loder()">Loader</button> -->
+
+<div [class.loader-hidden]="!show" >
+<span
+class=" spinner-border   text-primary " role="status"   
+[ngClass]="{'loader-hidden': !show }" > 
+<div class="loading" >Loading&#8230;</div>
+</span>
+</div>

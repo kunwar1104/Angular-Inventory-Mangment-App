@@ -1,0 +1,90 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  position: relative;
+  margin-top: -550px;
+  // transform: translateY(-550px);
+}
+.card-1{
+    display: flex;
+    width: 80%;
+    transform: translateX(280px);
+    height: 50px;
+    
+    position: relative;
+    // margin-top: -550px;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    background-color: rgb(228, 228, 224);
+    justify-content: space-between;
+
+
+}
+
+.card{
+  width: 20%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.content{
+    font-size: 15px;
+    height: 50px;
+}
+
+.card-text{
+    display: flex;
+    height: 100px;
+}
+.btn{
+  height: 50px;
+}
+.bi{
+    border-radius: 5px;
+}
+
+// 
+.canvas-style{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 280px;
+  margin-top: 50px;
+  border: 1px solid rgb(44, 43, 43);
+  box-shadow: 2px 2px 2px 2px #888888;
+  position: relative;
+  z-index: 9999;
+ 
+}
+#canvas{
+    border: 1px   black;
+    box-sizing: content-box;
+}
+
+.main-table{
+  display: flex;
+  margin-top: 75px;
+  margin-left: 300px;
+}
+// table
+.table{
+  height: 300px;
+  width: 550px;
+  margin-left: 950px;
+  margin-top: -350px;
+}
+.table1{
+  width: 550px;
+  margin-bottom: 20px;
+
+}
+.table2{
+  width: 550px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+}

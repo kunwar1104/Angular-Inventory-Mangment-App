@@ -1,0 +1,49 @@
+.form-input {
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.user{
+    // margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.user a{
+    color: blue;
+    cursor: pointer;
+}
+
+.commen-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+}
+.title{
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+.form-button{
+    height: 35px;
+    background-color: rgb(165, 182, 239);
+    border-radius:10px ;
+    color: black;
+}
+button:disabled{
+    cursor: not-allowed;
+}
+.invalid-input{
+    color: red;
+    
+    font-weight: bold;
+} 
+.user-auth{ 
+    margin: auto;
+}
+.alert{
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}

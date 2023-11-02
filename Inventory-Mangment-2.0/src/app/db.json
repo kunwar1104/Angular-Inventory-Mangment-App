@@ -1,0 +1,103 @@
+{
+  "products": [
+    {
+      "name": "apple macbook",
+      "price": "200000",
+      "category": "Laptop",
+      "color": "Laptop",
+      "description": "MacBook Pro, M2 chip, 2Tb ram",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTi_a8C10Ql63E9UeFJLc2AiBr4YjOmzeUfA&usqp=CAU",
+      "id": 11
+    },
+    {
+      "name": "i watch ultra-2",
+      "price": "89000",
+      "category": "watch",
+      "color": "black",
+      "description": "i watch ultra-2,GPS,Call ",
+      "image": "https://www.apple.com/in/watch/home/images/overview/ultra/tile_ultra_2__cu2x3w2l0zwy_small.jpg",
+      "id": 12
+    },
+    {
+      "name": "samsung ",
+      "price": "125000",
+      "category": "AShoes",
+      "color": "black",
+      "description": "Nike Shoes for football ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTBnCtm9h2sJVFS8O2Jg7vono8D-Mer_g0zec7KFXocBmm4rk2TtoouOraXFdAV_RoiMI&usqp=CAU",
+      "id": 13
+    },
+    {
+      "name": "samsung s23 Ultra",
+      "price": "79000",
+      "category": "mobile",
+      "color": "mobile",
+      "description": "samsung s23 Ultra 200mp camera",
+      "image": "https://images.moneycontrol.com/static-mcnews/2023/02/samsung-s23-ultra-1.jpg?impolicy=website&width=1600&height=900",
+      "id": 10
+    },
+    {
+      "name": "apple macbook",
+      "price": "200000",
+      "category": "Laptop",
+      "color": "Laptop",
+      "description": "MacBook Pro, M2 chip, 2Tb ram",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTi_a8C10Ql63E9UeFJLc2AiBr4YjOmzeUfA&usqp=CAU",
+      "id": 11
+    },
+    {
+      "name": "i watch ultra-2",
+      "price": "89000",
+      "category": "watch",
+      "color": "black",
+      "description": "i watch ultra-2,GPS,Call ",
+      "image": "https://www.apple.com/in/watch/home/images/overview/ultra/tile_ultra_2__cu2x3w2l0zwy_small.jpg",
+      "id": 12
+    },
+    {
+      "name": "Nike  ",
+      "price": "125000",
+      "category": "AShoes",
+      "color": "black",
+      "description": "Nike Shoes for football ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTBnCtm9h2sJVFS8O2Jg7vono8D-Mer_g0zec7KFXocBmm4rk2TtoouOraXFdAV_RoiMI&usqp=CAU",
+      "id": 13
+    },
+    {
+      "name": "samsung s23 Ultra",
+      "price": "79000",
+      "category": "mobile",
+      "color": "mobile",
+      "description": "samsung s23 Ultra 200mp camera",
+      "image": "https://images.moneycontrol.com/static-mcnews/2023/02/samsung-s23-ultra-1.jpg?impolicy=website&width=1600&height=900",
+      "id": 10
+    },
+    {
+      "name": "apple macbook",
+      "price": "200000",
+      "category": "Laptop",
+      "color": "Laptop",
+      "description": "MacBook Pro, M2 chip, 2Tb ram",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTi_a8C10Ql63E9UeFJLc2AiBr4YjOmzeUfA&usqp=CAU",
+      "id": 11
+    },
+    {
+      "name": "i watch ultra-2",
+      "price": "89000",
+      "category": "watch",
+      "color": "black",
+      "description": "i watch ultra-2,GPS,Call ",
+      "image": "https://www.apple.com/in/watch/home/images/overview/ultra/tile_ultra_2__cu2x3w2l0zwy_small.jpg",
+      "id": 12
+    },
+    {
+      "name": "Nike  ",
+      "price": "125000",
+      "category": "AShoes",
+      "color": "black",
+      "description": "Nike Shoes for football ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTBnCtm9h2sJVFS8O2Jg7vono8D-Mer_g0zec7KFXocBmm4rk2TtoouOraXFdAV_RoiMI&usqp=CAU",
+      "id": 13
+    }
+  ]
+}
