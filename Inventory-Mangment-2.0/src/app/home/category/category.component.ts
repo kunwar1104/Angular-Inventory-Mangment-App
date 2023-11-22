@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, numberAttribute } from '@angular/core';
-import { product } from '../../dataType';
+import { CategoryList, product } from '../../dataType';
 import { ProductService } from '../../Services/product.service';
 import { ADTSettings } from 'angular-datatables/src/models/settings';
 import { Subject } from 'rxjs';
@@ -8,22 +8,18 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 
-
-
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.scss'],
-  
+  styleUrls: ['./category.component.scss'],  
 })
 
 export class CategoryComponent implements OnInit {
 
   constructor (private product: ProductService, public dialog: MatDialog) {}
   
-  productlist!: product[];
+  productlist!: CategoryList[];
   productMessage: undefined | string;
-
   maxSize = 5;
   bigTotalItems = 175;
   bigCurrentPage = 1;
@@ -36,7 +32,7 @@ export class CategoryComponent implements OnInit {
   image: string | undefined;
   symbol: string | undefined;
 
-  displayedColumns: string[] = [ 'name', 'image', 'category',  'action'];
+  displayedColumns: string[] = [ 'category','description','action']; // here we remove image
   dataSource : [] | any
 
   @ViewChild(MatPaginator) paginator! : MatPaginator
@@ -46,10 +42,10 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit(): void { 
     this.list();     
-    this.dtOptions = {
-      pagingType: 'full_numbers',
+    // this.dtOptions = {
+    //   pagingType: 'full_numbers',
 
-    };
+    // };
   };
 
    // on click ask for delete confirmation 
@@ -61,10 +57,9 @@ export class CategoryComponent implements OnInit {
   };
 
   deleteProduct( id : number){
-
     // this.confirmDelete()
   console.log("ID for delete =",id)
-  this.product.deleteProduct(id).subscribe((result) => {
+  this.product.deleteCategory(id).subscribe((result) => {
     console.log(result)
     if(result) {
      this.productMessage= "Product is deleted";
@@ -74,19 +69,19 @@ export class CategoryComponent implements OnInit {
   })
   setTimeout(() => {
     this.productMessage= undefined
-  },3000)
+  },1000)
  } 
  
   
 
    list() {                                             // here we make this function for refrash the page after 
-    this.product.productList().subscribe((result) =>{   // the delete some product than updated page may show 
+    this.product.catagoryList().subscribe((result) =>{   // the delete some product than updated page may show 
       console.log("list result =",result)
       if(result){
         this.productlist = result ;
 
         // angular material ui 
-        this.dataSource= new MatTableDataSource<product>(this.productlist)
+        this.dataSource= new MatTableDataSource<CategoryList>(this.productlist)
         this.dataSource.paginator = this.paginator;
        
         this.dataSource.sort = this.sort;

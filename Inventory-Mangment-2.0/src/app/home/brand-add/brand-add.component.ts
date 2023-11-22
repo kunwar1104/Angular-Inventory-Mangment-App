@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from 'src/app/Services/product.service';
-import { product } from 'src/app/dataType';
+import { BrandList, product } from 'src/app/dataType';
 import { LoaderService } from 'src/app/loader/loader.service';
 
 @Component({
@@ -19,11 +19,11 @@ export class BrandAddComponent {
   }
 
 
-  submit(data: product){
-   this.product.addProduct(data).subscribe((result) => {
+  submit(data: BrandList){
+   this.product.addBrand(data).subscribe((result) => {
       this.sending = true;
       this.loderService.show();
-      console.log(result)
+      console.log("brand after submit click",result)
       setTimeout(() => {
         if(result){
           setTimeout(()=> {
@@ -31,7 +31,7 @@ export class BrandAddComponent {
           },500)
           console.log(this.addProductMessage)
           this.loderService.show();
-          this.route.navigate(['home/brand']);
+          this.route.navigate(['/brand']);
           this.loderService.hide();
   
          }

@@ -2,17 +2,37 @@
     <h1 class="title">Update Catagory</h1>
     <p class="error" >{{updatedMessage}}</p>
     <form #catagoryData="ngForm" className="commen-form" (ngSubmit)="submit(catagoryData.value)">
-        <!-- <input class="form-input" ngModel="{{productData?.name}}" type="text" name="name" placeholder="Enter Product Name" > -->
-        <!-- <input class="form-input" ngModel="{{productData?.price}}"  name="price" placeholder="Enter Product Price"> -->
-       <input class="form-input" type="text" ngModel="{{productData?.category}}"  name="category"  placeholder="Please Enter Catagory" #category="ngModel"  required="category" >
-       <span class="invalid-input" *ngIf="category.invalid && (category.dirty || category.touched)" >Please Enter Valid Catagory</span>
 
-        <!-- <input class="form-input" ngModel="{{productData?.category}}"  name="color" placeholder="Enter Product Color"> -->
-        <!-- <textarea class="form-input" ngModel="{{productData?.description}}"  name="description" placeholder="Enter Product Description"></textarea> -->
-        <!-- <input class="form-input" ngModel="{{productData?.image}}"  name="image" placeholder="Enter Product Image"> -->
-        <button class="btn btn-outline-success" type="submit" [disabled]="catagoryData.invalid">
-            <span class=" spinner-border text-primary" role="status" *ngIf="sending"></span>
-                {{sending ? 'please wait ' : 'Update Catagory' }}
-        </button>
+        <!-- <input class="form-input" ngModel="{{productData.name}}" type="text" name="name" placeholder="Enter Product Name"
+         pattern="(^[a-zA-Z ]*$)"  #name="ngModel" >
+        <div class="invalid-input" *ngIf="name.invalid && (name.dirty || name.touched)" >Please Enter Valid Catagory</div>
+        <div class="invalid-input" *ngIf="name.errors?.['pattern']"> Name must be Aplhabat </div> -->
+
+<!-- Category   -->
+        <input class="form-input" type="text" 
+               ngModel="{{productData.category}}"
+               name="category" placeholder="Enter Product category"
+               #category="ngModel"
+               pattern="(^[a-zA-Z ]*$)"
+               required > 
+
+        <div *ngIf="category.invalid && (category.dirty || category.touched)" class="invalid-input" >
+
+               <div *ngIf="category.errors?.['required']">Catagory is required.</div>
+               <div *ngIf="category.errors?.['pattern']">Catagory name must be alphabats.</div>
+        </div>
+
+<!-- Description -->
+        <textarea class="form-input" type="text" ngModel="{{productData.description}}"  name="description" placeholder="Enter Product Description" 
+                  required="description" #description="ngModel" ></textarea>
+      
+        <div *ngIf="description.invalid && (description.dirty || description.touched )" class="invalid-input">
+
+                <div *ngIf="description.errors?.['required']">
+                  Description is requierd
+                </div>
+        </div>
+
+        <button class="form-button" type="submit" [disabled]="catagoryData.invalid">Submit </button>
     </form>
 </div>

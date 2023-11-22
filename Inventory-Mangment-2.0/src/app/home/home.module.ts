@@ -2,7 +2,6 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CatagoryUpdateComponent } from './catagory-update/catagory-update.component';
 import { CategoryComponent } from './category/category.component';
 import { LoaderComponent } from '../loader/loader.component';
-import { SidbarComponent } from './sidbar/sidbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
@@ -23,16 +22,18 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule} from '@angular/material/input';
-import { MatDialogModule } from '@angular/material/dialog';
 import { NgToastModule } from 'ng-angular-popup';
 import { BrandAddComponent } from './brand-add/brand-add.component';
 import { CategoryAddComponent } from './category-add/category-add.component';
 import { ProdutUpdateComponent } from './produt-update/produt-update.component';
+import { DemoSidbarComponent } from './demo-sidbar/demo-sidbar.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
     HomeComponent,
-    SidbarComponent,
     Welcome1Component,
     BrandComponent,
     BrandUpdateComponent,
@@ -43,6 +44,7 @@ import { ProdutUpdateComponent } from './produt-update/produt-update.component';
     BrandAddComponent,
     CategoryAddComponent,
     ProdutUpdateComponent,
+    DemoSidbarComponent,
     // LoaderComponent
     
   ],
@@ -65,6 +67,8 @@ import { ProdutUpdateComponent } from './produt-update/produt-update.component';
     MatInputModule,
     MatDialogModule,
     NgToastModule,
+    MatButtonModule,
+    ModalModule.forRoot(),
     PaginationModule.forRoot(),
   ]
 })

@@ -1,30 +1,29 @@
 export interface Login {
         username: string;
         password: string
-
     }
 
-    export interface User {
-        name: string;
-        email: string;
-    }
-    export interface product{
-        name: string;
-        price: string;
-        category: string;
-        color: string;
-        description: string;
-        image:string;
-        id:number;
-   }
-
-   export interface BRANDS {
-    id:number;
-    serialNo:string;
-   name:string;
-    products:string;
+export interface BrandList {
+    id: number;
+    brand: string;
+    description: string;
 }
 
+export interface CategoryList {
+    id: string;
+    category: string;
+    description: string;
+}
+export interface product{
+    id:string;
+    name:string;
+    brand:string ;
+    price: string;
+    category: string;
+    color: string;
+    description: string;
+    image:string;
+}
 
 export interface perodic {
     position: number;

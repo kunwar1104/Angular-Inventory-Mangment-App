@@ -1,103 +1,169 @@
 {
   "products": [
     {
-      "name": "apple macbook",
-      "price": "200000",
-      "category": "Laptop",
+      "name": "i-phone 15",
+      "brand": "Apple",
+      "price": "250000",
+      "category": "Phone",
       "color": "black",
-      "description": "MacBook Pro, M2 chip, 2Tb ram",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTi_a8C10Ql63E9UeFJLc2AiBr4YjOmzeUfA&usqp=CAU",
-      "id": 11
+      "description": "apple i phone 15 pro max 2-TB",
+      "image": "https://images.macrumors.com/t/OGS-wMpuHXbX6VkpJd6urJH1rEg=/1600x0/article-new/2023/09/iphone-15-pro-gray.jpg",
+      "id": 9
     },
     {
-      "name": "i watch ultra-2",
-      "price": "89000",
-      "category": "watch",
-      "color": "black",
-      "description": "i watch ultra-2,GPS,Call ",
-      "image": "https://www.apple.com/in/watch/home/images/overview/ultra/tile_ultra_2__cu2x3w2l0zwy_small.jpg",
-      "id": 12
-    },
-    {
-      "name": "samsung ",
-      "price": "125000",
-      "category": "AShoes",
-      "color": "black",
-      "description": "Nike Shoes for football ",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTBnCtm9h2sJVFS8O2Jg7vono8D-Mer_g0zec7KFXocBmm4rk2TtoouOraXFdAV_RoiMI&usqp=CAU",
-      "id": 13
-    },
-    {
-      "name": "samsung s23 Ultra",
-      "price": "79000",
-      "category": "mobile",
-      "color": "mobile",
-      "description": "samsung s23 Ultra 200mp camera",
-      "image": "https://images.moneycontrol.com/static-mcnews/2023/02/samsung-s23-ultra-1.jpg?impolicy=website&width=1600&height=900",
+      "name": "S-23-Ultra",
+      "brand": "samsung",
+      "price": "250000",
+      "category": "Phone",
+      "color": "Silver",
+      "description": "Samsung S24 Ultra ",
+      "image": "https://cdn.mos.cms.futurecdn.net/LFfcQbsfMYnTWFzPZy7sND-970-80.jpg.webp",
       "id": 10
     },
     {
-      "name": "apple macbook",
+      "name": "Pro-Run",
+      "brand": "Nike",
       "price": "200000",
-      "category": "Laptop",
-      "color": "Laptop",
-      "description": "MacBook Pro, M2 chip, 2Tb ram",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTi_a8C10Ql63E9UeFJLc2AiBr4YjOmzeUfA&usqp=CAU",
+      "category": "Shoes",
+      "color": "black",
+      "description": "Runing Shoes ",
+      "image": "https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/w_1536,c_limit/tpqid8vgfey6m4ke86te/nike-joyride.jpg",
       "id": 11
     },
     {
-      "name": "i watch ultra-2",
-      "price": "89000",
-      "category": "watch",
-      "color": "black",
-      "description": "i watch ultra-2,GPS,Call ",
-      "image": "https://www.apple.com/in/watch/home/images/overview/ultra/tile_ultra_2__cu2x3w2l0zwy_small.jpg",
+      "name": "Mac Air",
+      "brand": "Apple",
+      "price": "250000",
+      "category": "Laptop",
+      "color": "Silver",
+      "description": "MackBook Pro 15-Inch",
+      "image": "https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.xlarge_2x.jpg",
       "id": 12
     },
     {
-      "name": "Nike  ",
-      "price": "125000",
-      "category": "AShoes",
+      "name": "S-23-Ultra",
+      "brand": "Samsung",
+      "price": "250000",
+      "category": "Phone",
       "color": "black",
-      "description": "Nike Shoes for football ",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTBnCtm9h2sJVFS8O2Jg7vono8D-Mer_g0zec7KFXocBmm4rk2TtoouOraXFdAV_RoiMI&usqp=CAU",
-      "id": 13
+      "description": "s23 ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBdUkTUG0D6fgnr7cE4AOyqEv4M7WcNSgi4H0ON6YXqV4P65q4P0WjaLufib_HcHy7-Zk",
+      "id": 19
     },
     {
-      "name": "samsung s23 Ultra",
-      "price": "79000",
-      "category": "mobile",
-      "color": "mobile",
-      "description": "samsung s23 Ultra 200mp camera",
-      "image": "https://images.moneycontrol.com/static-mcnews/2023/02/samsung-s23-ultra-1.jpg?impolicy=website&width=1600&height=900",
+      "name": "i-phone 15",
+      "brand": "Apple",
+      "price": "250000",
+      "category": "Phone",
+      "color": "black",
+      "description": "apple i phone 15 pro max 2-TB",
+      "image": "https://images.macrumors.com/t/OGS-wMpuHXbX6VkpJd6urJH1rEg=/1600x0/article-new/2023/09/iphone-15-pro-gray.jpg",
+      "id": 9
+    },
+    {
+      "name": "S-23-Ultra",
+      "brand": "samsung",
+      "price": "250000",
+      "category": "Phone",
+      "color": "Silver",
+      "description": "Samsung S24 Ultra ",
+      "image": "https://cdn.mos.cms.futurecdn.net/LFfcQbsfMYnTWFzPZy7sND-970-80.jpg.webp",
       "id": 10
     },
     {
-      "name": "apple macbook",
+      "name": "Pro-Run",
+      "brand": "Nike",
       "price": "200000",
-      "category": "Laptop",
-      "color": "Laptop",
-      "description": "MacBook Pro, M2 chip, 2Tb ram",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTi_a8C10Ql63E9UeFJLc2AiBr4YjOmzeUfA&usqp=CAU",
+      "category": "Shoes",
+      "color": "black",
+      "description": "Runing Shoes ",
+      "image": "https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/w_1536,c_limit/tpqid8vgfey6m4ke86te/nike-joyride.jpg",
       "id": 11
     },
     {
-      "name": "i watch ultra-2",
-      "price": "89000",
-      "category": "watch",
-      "color": "black",
-      "description": "i watch ultra-2,GPS,Call ",
-      "image": "https://www.apple.com/in/watch/home/images/overview/ultra/tile_ultra_2__cu2x3w2l0zwy_small.jpg",
+      "name": "Mac Air",
+      "brand": "Apple",
+      "price": "250000",
+      "category": "Laptop",
+      "color": "Silver",
+      "description": "MackBook Pro 15-Inch",
+      "image": "https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.xlarge_2x.jpg",
       "id": 12
     },
     {
-      "name": "Nike  ",
-      "price": "125000",
-      "category": "AShoes",
+      "name": "S-23-Ultra",
+      "brand": "Samsung",
+      "price": "250000",
+      "category": "Phone",
       "color": "black",
-      "description": "Nike Shoes for football ",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTBnCtm9h2sJVFS8O2Jg7vono8D-Mer_g0zec7KFXocBmm4rk2TtoouOraXFdAV_RoiMI&usqp=CAU",
-      "id": 13
+      "description": "s23 ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBdUkTUG0D6fgnr7cE4AOyqEv4M7WcNSgi4H0ON6YXqV4P65q4P0WjaLufib_HcHy7-Zk",
+      "id": 19
+    },
+    {
+      "name": "One Plus Open",
+      "brand": "OPPO",
+      "price": "250000",
+      "category": "Laptop",
+      "color": "silver",
+      "description": "Foldeble Phone with fast Prossesor",
+      "image": "https://media.cnn.com/api/v1/images/stellar/prod/231026140107-oneplus-open-review-5.jpg?c=16x9&q=h_720,w_1280,c_fill/f_webp",
+      "id": 20
+    }
+  ],
+  "brands": [
+    {
+      
+      "brand": "Apples",
+      "description": "abcd",
+      "id": 1
+    },
+    {
+      "brand": "Samsungs",
+      "description": "bbbbb",
+      "id": 2
+    },
+    {
+      "brand": "Nike",
+      "description": "abcd",
+      "id": 3
+    },
+    {
+      "brand": "MI",
+      "description": "mmmmm",
+      "id": 4
+    },
+    {
+      "brand": "OPPO",
+      "description": "vvvvvv",
+      "id": 5
+    }
+  ],
+  "categories": [
+    {
+      "id": 2,
+      "category": "Laptop",
+      "description": "abc"
+    },
+    {
+      "id": 3,
+      "category": "Watch",
+      "description": "abc"
+    },
+    {
+      "category": "Macbook",
+      "description": "mmmmm",
+      "id": 5
+    },
+    {
+      "category": "Shoes",
+      "description": "sssss",
+      "id": 6
+    },
+    {
+      "category": "Car",
+      "description": "cccc",
+      "id": 7
     }
   ]
 }

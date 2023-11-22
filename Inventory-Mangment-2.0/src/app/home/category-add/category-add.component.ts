@@ -10,9 +10,12 @@ import { LoaderService } from 'src/app/loader/loader.service';
 })
 export class CategoryAddComponent {
  
-
   addProductMessage: string | undefined;
   sending : boolean = false;
+  // category!: any
+  // productData!: any;
+  addProduct:any
+
 
   constructor( private product:ProductService , private route: Router, private loderService: LoaderService){}
 
@@ -20,10 +23,13 @@ export class CategoryAddComponent {
   }
 
   submit(data: any) {
-    this.product.addProduct(data).subscribe((result) => {
+    this.product.addCategory(data).subscribe((result) => {
       this.sending = true;
       this.loderService.show();
       console.log(result)
+      // this.productData =data;
+      // console.log(this.productData)
+
       setTimeout(() => {
         if(result){
           setTimeout(()=> {
@@ -31,7 +37,7 @@ export class CategoryAddComponent {
           },100)
           console.log(this.addProductMessage)
           this.loderService.show();
-          this.route.navigate(['home/category']);
+          this.route.navigate(['category']);
           this.loderService.hide();
   
          }

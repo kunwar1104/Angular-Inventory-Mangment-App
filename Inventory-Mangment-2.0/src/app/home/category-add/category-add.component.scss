@@ -4,8 +4,8 @@
     justify-content: center;
     align-items: center;
     // margin-top: -500px;
-    transform: translateY(-500px);
-    z-index: 99999;
+    // transform: translateY(-500px);
+    // z-index: 99999;
 
 }
 .commen-form{
@@ -32,7 +32,11 @@
     justify-content: center;
     // align-items: center;
     margin: auto;
+    margin-top: 100px;
     margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif
 }
 .error{
     display: flex;

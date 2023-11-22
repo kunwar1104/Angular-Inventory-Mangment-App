@@ -4,17 +4,34 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AlertComponent } from 'ngx-bootstrap/alert';
 import { LoaderComponent } from './loader/loader.component';
+import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './Services/auth.guard';
+import { homeGuard } from './Services/home.guard';
 
 
 const routes: Routes = [
-  {path: '', redirectTo:'login', pathMatch: 'full'},
-{path: 'login', component: LoginComponent},  
-{ path: '',
-  // component: HomeComponent,
-  loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-},
-{path: 'notifiction/alert', component: AlertComponent},  
-{path: 'loader', component: LoaderComponent},  
+  {path: '', redirectTo:'login', pathMatch: 'full'
+  },
+  {
+    path: 'login', component: LoginComponent,
+    canActivate : [AuthGuard]
+  },  
+  {
+    path: '',
+   loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+  
+  },
+  {
+    path: 'notifiction/alert', component: AlertComponent
+  },  
+  {
+    path: 'loader', component: LoaderComponent
+  },  
+  {
+    path: '**',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  }
 
 
 

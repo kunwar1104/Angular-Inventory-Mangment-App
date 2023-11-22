@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/Services/product.service';
 import { product } from 'src/app/dataType';
@@ -10,17 +11,21 @@ import { product } from 'src/app/dataType';
 })
 export class CatagoryUpdateComponent {
   updatedMessage: string | undefined
-  productData: undefined | product;
+  productData:  any;
   sending : boolean = false;
+  category : any;
+  description: any;
+  
 
 
   constructor(private route: ActivatedRoute, private product: ProductService, private router:Router,) { }
 
   ngOnInit(): void {
-    let productId = this.route.snapshot.paramMap.get('id')
+    let productId: any  = this.route.snapshot.paramMap.get('id')
     console.log("productId =", productId);
-    productId && this.product.getProduct(productId).subscribe((data) => {
+    productId && this.product.getCategory(productId).subscribe((data) => {
       console.log("catagory update = ",data)
+
       this.productData = data
       
     })
@@ -32,7 +37,8 @@ export class CatagoryUpdateComponent {
       data.id = this.productData.id;
     }
 
-    this.product.updateProduct(data).subscribe((result) => {
+    
+    this.product.updateCatagory(data).subscribe((result) => {
       if (result) {
         this.updatedMessage = "Updated successful"
         console.log(this.updatedMessage)
@@ -42,6 +48,6 @@ export class CatagoryUpdateComponent {
     setTimeout(() => {
       this.updatedMessage = 'Updated successful'
     }, 3000)
-    this.router.navigate(['home/category'])
+    this.router.navigate(['category'])
   }
 }

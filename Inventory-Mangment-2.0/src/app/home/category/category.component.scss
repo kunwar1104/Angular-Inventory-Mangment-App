@@ -1,43 +1,41 @@
 .productlist{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    margin-left: 358px;
-    margin-top: -550px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
     z-index: 99999;
-   }
-   .title{
+}
+.title{
     display: flex;
     justify-content: center;
     font-weight: bold;
     font-family:'Times New Roman', Times, serif
-   }
-   table{
-       // display: flex;
-       // flex-direction: column;
-       // justify-content: center;
-       text-align: left ;
-       color: cadetblue;
-   }
-   img{
+}
+table{
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    text-align: left ;
+    color: cadetblue;
+}
+img{
     height: 100px;
     width: 150px;
-   }
-   table td , table th{
-       border: 1px solid silver;
-       padding: 15px;
-       width: 160px;
-   }
-   .delete-message{
-       color: rgb(7, 125, 7);
-   }
-   .update-btn{
+}
+table td , table th{
+    border: 1px solid silver;
+    padding: 15px;
+    width: 160px;
+}
+.delete-message{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(7, 125, 7);
+}
+.update-btn{
     //    color: blue;
-       margin-left: 20px;
-   }
+    margin-left: 20px;
+}
 // angular material ui
    table {
     width: 100%;
-  }
+}

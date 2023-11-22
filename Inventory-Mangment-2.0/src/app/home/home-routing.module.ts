@@ -12,56 +12,77 @@ import { AuthGuard } from '../Services/auth.guard';
 import { BrandAddComponent } from './brand-add/brand-add.component';
 import { CategoryAddComponent } from './category-add/category-add.component';
 import { ProdutUpdateComponent } from './produt-update/produt-update.component';
+import { DemoSidbarComponent } from './demo-sidbar/demo-sidbar.component';
+import { homeGuard } from '../Services/home.guard';
 
   console.log("home module is here")
 const routes: Routes = [
   
   {path: '',
    component: HomeComponent,
+   canActivate : [homeGuard],
+
    children:[
        
-   {path: 'home/welcome1', component: Welcome1Component,
-   canActivate: [AuthGuard]  
+   {path: 'dashboard', component: Welcome1Component,
+   canActivate : [homeGuard]
+
   },
-   {path: 'home/add-product', component: AddProductComponent,
-    canActivate: [AuthGuard]   
+   {path: 'product-add', component: AddProductComponent,
+   canActivate : [homeGuard]
+
   },
-   {path: 'home/brand', component: BrandComponent,
-   canActivate: [AuthGuard]  
+   {path: 'brand', component: BrandComponent,
+   canActivate : [homeGuard]
+
   },
-   {path: 'home/brand-update/:id', component: BrandUpdateComponent,
-   canActivate: [AuthGuard]  
+   {path: 'brand/:id', component: BrandUpdateComponent,
+   canActivate : [homeGuard]
+
   },
-   {path: 'home/category', component: CategoryComponent,
-   canActivate: [AuthGuard]  
+   {path: 'category', component: CategoryComponent,
+   canActivate : [homeGuard]
+
   },
-   {path: 'home/category-update/:id', component: CatagoryUpdateComponent,
-   canActivate: [AuthGuard]  
+   {path: 'category/:id', component: CatagoryUpdateComponent,
+   canActivate : [homeGuard]
+
   },
-   {path: 'home/produts-list', component: ProdutsListComponent,
-   canActivate: [AuthGuard]  
+   {path: 'produts', component: ProdutsListComponent,
+   canActivate : [homeGuard]
+
    },
-   {path: 'home/brand-add', component: BrandAddComponent,
-   canActivate: [AuthGuard]  
+   {path: 'brand-add', component: BrandAddComponent,
+   canActivate : [homeGuard]
+
    },
-   {path: 'home/category-add', component: CategoryAddComponent,
-   canActivate: [AuthGuard]  
+   {path: 'category-add', component: CategoryAddComponent,
+   canActivate : [homeGuard]
+     
    },
    {
-    path: 'home/produt-update/:id', component : ProdutUpdateComponent,
-    canActivate: [AuthGuard]
-   }
+    path: 'produt/:id', component : ProdutUpdateComponent,
+    canActivate : [homeGuard]
+
+   },
    
+   {
+    path: 'home/demo-sidbar', component : DemoSidbarComponent,
+   },
+  //  {
+  //   path: 'home/sidbar', component : SidbarComponent,
+  //  }
 
    ]
 },
+
 
 ] 
 
 @NgModule({
   declarations: [],
+  
   imports: [
-   
   RouterModule.forChild(routes)
   ],
   exports: [RouterModule]

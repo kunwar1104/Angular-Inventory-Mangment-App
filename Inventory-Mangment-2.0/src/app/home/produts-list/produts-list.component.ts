@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { LoaderService } from 'src/app/loader/loader.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-produts-list',
@@ -20,7 +21,7 @@ export class ProdutsListComponent {
   @ViewChild(MatSort) sort! : MatSort
   
   dataSource : [] | any
-  displayedColumns: string[] = [ 'name', 'image', 'category',   'price', 'description','action'];
+  displayedColumns: string[] = [ 'name','brand', 'image', 'category','price', 'description','action'];
   
   constructor (private product: ProductService,private loaderService: LoaderService) {}
 
@@ -61,6 +62,7 @@ export class ProdutsListComponent {
 
          // angular material ui 
          this.dataSource= new MatTableDataSource<product>(this.productlist)
+         console.log(this.productlist)
          this.dataSource.paginator = this.paginator;
         
          this.dataSource.sort = this.sort;

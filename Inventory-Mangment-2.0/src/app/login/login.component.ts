@@ -62,7 +62,7 @@ export class LoginComponent {
   login(data: Login): void {
     // this.sending = true;
     console.log('b')
-    this.loaderService.show()
+    // this.loaderService.show()
     console.log("c?;;;;;;;;;;;;")
     
     setTimeout(() => {
@@ -80,7 +80,7 @@ export class LoginComponent {
             console.log('token',this.apiResponse.token, this.apiResponse.id)
             setTimeout(() => {
                 // this.showLoder()
-                this.route.navigate(['/home/welcome1'])
+                this.route.navigate(['/dashboard'])
                 // this.hideLoder()
               },1500)
            

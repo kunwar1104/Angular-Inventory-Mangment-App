@@ -1,28 +1,67 @@
 <div class="add-product">
+  <!-- <p class="error">{{addProductMessage}}</p> -->
+  <form [formGroup]="addProduct" class="commen-form" (ngSubmit)="submit(addProduct)">
     <h1 class="title">Add New Product</h1>
-    <p class="error" >{{addProductMessage}}</p>
-    <form #addProduct="ngForm" className="commen-form" (ngSubmit)="submit(addProduct.value)">
-        <input class="form-input" ngModel  type="text" name="name" #name="ngModel"  placeholder="Enter Product Name" required>
-        <span class="invalid-input" *ngIf="name.invalid && (name.dirty || name.touched)" >Please Enter Valid Name</span>
 
-        <input class="form-input" ngModel  name="price" placeholder="Enter Product Price" #price="ngModel" required >
-        <span class="invalid-input" *ngIf="name.invalid && (price.dirty || price.touched)" >Please Enter Valid Price</span>
-        
-        <input class="form-input" ngModel  name="category" placeholder="Enter Product Category" #category="ngModel" required >
-        <span class="invalid-input" *ngIf="name.invalid && (category.dirty || category.touched)" >Please Enter Valid Category</span>
+<!-- Product Name -->
+      <input class="form-input" id="name" formControlName="name" placeholder="Please Enter Product Name" required>
+      <div class="invalid-input" *ngIf="addProduct.get('name').invalid && 
+          addProduct.get('name').touched">
+          <div class="invalid-input" *ngIf="addProduct.get('name').hasError('required')" >Product Name is required</div>     
+      </div>
+      <div class="invalid-input" *ngIf="addProduct.get('name').hasError('alphabetOnly') && addProduct.get('name').touched"></div>
+<!-- Brand Name  -->
+      <div >
+            <select class="form-input"    id="brand" formControlName="brand"  >
+              <option value="" disabled>Select a brand </option>
+              <option  *ngFor="let itam of brandListData " [value]="itam.brand" >{{itam.brand}}</option>
+            </select>
+            <div class="invalid-input" *ngIf="addProduct.get('brand')?.invalid && addProduct.get('brand')?.touched ">
+              <div class="invalid-input" *ngIf="addProduct.get('brand').hasError('required')">Brand is required</div>
+            </div>
+      </div>
+      
+<!--Price  -->
+    <input class="form-input" type="text" name="price" id="price" formControlName="price" placeholder="Please Enter Price " required >
+    <div class="invalid-input" *ngIf="addProduct.get('price').hasError('required') && addProduct.get('price').touched"> Price is required.</div>
+    <div class="invalid-input" *ngIf="addProduct.get('price').hasError('numberOnly') && addProduct.get('price').touched">Price Must Be Number</div>
+         
+<!--Category  -->
+  <div>
+      <select id="category" formControlName="category" class="form-input">
+        <option value="" disabled>Select a category</option>
+        <option  *ngFor="let itam of categoryListData " [value]="itam.category"  >{{itam.category}}</option>
+      </select>
+      <div class="invalid-input" *ngIf="addProduct.get('category')?.invalid && addProduct.get('category')?.touched">
+        <div  *ngIf="addProduct.get('category')?.hasError('required')">Category is required.</div>
+      </div>
+  </div>
 
-        <input class="form-input" ngModel  name="color" placeholder="Enter Product Color"  #color="ngModel" required >
-        <span class="invalid-input" *ngIf="color.invalid && (color.dirty || color.touched)" >Please Enter Valid Color</span>
+<!-- Color -->
+    <input class="form-input" type="text" id="color" formControlName="color" placeholder="Please Enter Color" required>
+    <div class="invalid-input" *ngIf="addProduct.get('color').hasError('required') && addProduct.get('color').touched" >Color is required </div>
+    
+<!-- Description -->
+    <textarea class="form-input" type="text" id="description" formControlName="description" name="description"
+              placeholder="Please Enter Description" required ></textarea>
+    <div class="invalid-input" *ngIf="addProduct.get('description').hasError('required') && addProduct.get('description')?.touched">
+    Please Enter Valid Description</div>     
 
-        <textarea class="form-input" ngModel  name="description" placeholder="Enter Product Description"></textarea>
+<!--Image  -->
+    <!-- <label ><b>Image with type validation</b></label>
+    <input class="form-input" type="file" id="image" formControlName="image"  required >
+    <div class="invalid-input" *ngIf="addProduct.get('image').hasError('required') && addProduct.get('image').touched">Please Enter Valid Image </div>
+    <div class="invalid-input" *ngIf="addProduct.get('image').hasError('invalidFileType') && addProduct.get('image').touched">Please Enter Jpeg, Jpg, Png Type of Image </div> -->
 
-        <input class="form-input"  ngModel  name="image" placeholder="Enter Product Image" #image="ngModel" required>
-        <span class="invalid-input" *ngIf="image.invalid && (image.dirty || image.touched)" >Please Enter Valid Image</span>
 
-        <button class="form-button" type="submit" [disabled]="addProduct.invalid">
-            <span class=" spinner-border text-primary" role="status" *ngIf="sending"></span>
-                {{sending ? 'please wait ' : 'Add Product' }}
-           
-        </button>
-    </form>
-</div>  
+    <!-- Image with Json server conection -->
+    <label ><b>Image with json server </b></label>
+    <input type="text" class="form-input" formControlName="image" id="image"  placeholder="Enter Product Image" required>
+        <span class="invalid-input" *ngIf="addProduct.get('image')?.invalid && addProduct.get('image')?.touched" >Please Enter Valid Image</span>
+        <div *ngIf="addProduct.get('image').hasError('pattern')">Name must contain only letters.</div>
+
+
+    <p>Form Status: {{ addProduct.status }}</p>
+    <button class="form-button" type="submit" [disabled]="addProduct.invalid">Submit</button>
+  </form>
+</div>
