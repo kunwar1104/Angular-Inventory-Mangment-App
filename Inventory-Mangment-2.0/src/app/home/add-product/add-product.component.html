@@ -9,7 +9,7 @@
           addProduct.get('name').touched">
           <div class="invalid-input" *ngIf="addProduct.get('name').hasError('required')" >Product Name is required</div>     
       </div>
-      <div class="invalid-input" *ngIf="addProduct.get('name').hasError('alphabetOnly') && addProduct.get('name').touched"></div>
+      <div class="invalid-input" *ngIf="addProduct.get('name').hasError('alphabetOnly') && addProduct.get('name').touched">Name must be a Aplhabat</div>
 <!-- Brand Name  -->
       <div >
             <select class="form-input"    id="brand" formControlName="brand"  >
@@ -40,6 +40,8 @@
 <!-- Color -->
     <input class="form-input" type="text" id="color" formControlName="color" placeholder="Please Enter Color" required>
     <div class="invalid-input" *ngIf="addProduct.get('color').hasError('required') && addProduct.get('color').touched" >Color is required </div>
+    <div class="invalid-input" *ngIf="addProduct.get('color').hasError('alphabetOnly') && addProduct.get('color').touched">Color should be a Aplhabat </div>
+
     
 <!-- Description -->
     <textarea class="form-input" type="text" id="description" formControlName="description" name="description"

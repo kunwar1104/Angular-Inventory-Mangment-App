@@ -5,6 +5,7 @@ import { ProductService } from 'src/app/Services/product.service';
 import { product } from 'src/app/dataType';
 import { LoaderService } from 'src/app/loader/loader.service';
 import { CategoryList } from './../../dataType';
+import { data } from 'jquery';
 
 function alphabetOnly(control: FormControl): { [key: string]: any } | null {
   const valid = /^[a-zA-Z ]*$/.test(control.value);
@@ -15,6 +16,7 @@ function numberOnly (control : FormControl ): { [key: string] : any } | null {
   const valid = /^[0-9]*$/.test(control.value);
   return valid ? null : { numberOnly: true}; 
 }
+
 @Component({
   selector: 'app-produt-update',
   templateUrl: './produt-update.component.html',
@@ -30,10 +32,10 @@ export class ProdutUpdateComponent {
     addProduct: FormGroup<any> | any ;
     CategoryListData: any;
     brandListData: any;
-   // name: any;
-   
-
-   
+    data: any;
+    adata: any;
+    productId: any;
+    
     constructor(
       private route: ActivatedRoute, 
       private product: ProductService,
@@ -51,6 +53,7 @@ export class ProdutUpdateComponent {
 
       ngOnInit(): void {
         
+  
         this.product.catagoryList().subscribe((result) =>  {
           console.log("catagoryList = ",result)
           this.CategoryListData = result
@@ -69,19 +72,16 @@ export class ProdutUpdateComponent {
           color: new FormControl('',[Validators.required, alphabetOnly  ]),
           description: new FormControl('',[Validators.required,  ]),
          // image : new FormControl (null, [Validators.required , this.imageTypeValidator    ]),
-          image:new FormControl (null, [Validators.required])
+          image:new FormControl (null, [Validators.required]),
+          // id: new FormControl ('')
         })
 
-        let productId:any = this.route.snapshot.paramMap.get('id')
-        console.log("productId =", productId, typeof(this.route.snapshot.paramMap.get('id')));
+         this.productId = this.route.snapshot.paramMap.get('id')
+        console.log("productId =", this.productId);
          this.showLoader();
-           this.product.getProduct(productId).subscribe((data) => {
+           this.product.getProduct(this.productId).subscribe((data) => {
          this.hideLoader() 
           console.log("Product update = ",data)
-     
-        //    this.addProduct = data
-        //  console.log("addProduct =",this.addProduct)
-        //  this.addProduct.setValue(this.addProduct)
 
         this.addProduct.patchValue({
           name: data.name,
@@ -90,19 +90,27 @@ export class ProdutUpdateComponent {
           category: data.category,
           color: data.color,
           description: data.description,
-          image: data.image
+          image: data.image,
+          // id: data.id,
         });
             console.log("after patchValue",this.addProduct.value)
         })
       }
 
-    submit(data : any) {
-      // console.log("addProduct",addProduct.value)
-      console.log('submit =',data);
-      if (this.addProduct) {
-        data.id = this.addProduct.id;
-      }
-      this.product.updateProduct(data).subscribe((result) => {
+    submit(data: any) {
+      
+      console.log("data = ",data)
+      // if (this.addProduct) {
+      //   // data = JSON.stringify(data)
+      //   console.log("data after converted to json format = ",data)
+      //   // this.addProduct.id = this.adata
+      //   // console.log("id",this.adata)
+      //   data.id = this.addProduct.value.id;
+      //   console.log("id ==",this.addProduct.value.id)
+      //   // data = this.ndata;
+      // }
+      console.log(data)
+      this.product.updateProduct(data,this.productId ).subscribe((result) => {
         if (result) {
           console.log("Produt List =",result)
           this.updatedMessage = "Updated successful"
@@ -152,6 +160,8 @@ export class ProdutUpdateComponent {
    
   
 }
+
+
 
 
 

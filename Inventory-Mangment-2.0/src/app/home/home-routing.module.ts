@@ -14,6 +14,7 @@ import { CategoryAddComponent } from './category-add/category-add.component';
 import { ProdutUpdateComponent } from './produt-update/produt-update.component';
 import { DemoSidbarComponent } from './demo-sidbar/demo-sidbar.component';
 import { homeGuard } from '../Services/home.guard';
+import { NewSidebarComponent } from './new-sidebar/new-sidebar.component';
 
   console.log("home module is here")
 const routes: Routes = [
@@ -69,9 +70,10 @@ const routes: Routes = [
    {
     path: 'home/demo-sidbar', component : DemoSidbarComponent,
    },
-  //  {
-  //   path: 'home/sidbar', component : SidbarComponent,
-  //  }
+   {
+    path: 'new-sidebar', component : NewSidebarComponent
+   }
+  
 
    ]
 },

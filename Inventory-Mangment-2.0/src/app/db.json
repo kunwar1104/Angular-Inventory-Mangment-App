@@ -3,7 +3,7 @@
     {
       "name": "i-phone 15",
       "brand": "Apple",
-      "price": "250000",
+      "price": "25",
       "category": "Phone",
       "color": "black",
       "description": "apple i phone 15 pro max 2-TB",
@@ -12,7 +12,7 @@
     },
     {
       "name": "S-23-Ultra",
-      "brand": "samsung",
+      "brand": "Samsung",
       "price": "250000",
       "category": "Phone",
       "color": "Silver",
@@ -29,16 +29,6 @@
       "description": "Runing Shoes ",
       "image": "https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/w_1536,c_limit/tpqid8vgfey6m4ke86te/nike-joyride.jpg",
       "id": 11
-    },
-    {
-      "name": "Mac Air",
-      "brand": "Apple",
-      "price": "250000",
-      "category": "Laptop",
-      "color": "Silver",
-      "description": "MackBook Pro 15-Inch",
-      "image": "https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.xlarge_2x.jpg",
-      "id": 12
     },
     {
       "name": "S-23-Ultra",
@@ -62,7 +52,7 @@
     },
     {
       "name": "S-23-Ultra",
-      "brand": "samsung",
+      "brand": "Samsung",
       "price": "250000",
       "category": "Phone",
       "color": "Silver",
@@ -102,9 +92,9 @@
     },
     {
       "name": "One Plus Open",
-      "brand": "OPPO",
+      "brand": "OnePlus",
       "price": "250000",
-      "category": "Laptop",
+      "category": "Phone",
       "color": "silver",
       "description": "Foldeble Phone with fast Prossesor",
       "image": "https://media.cnn.com/api/v1/images/stellar/prod/231026140107-oneplus-open-review-5.jpg?c=16x9&q=h_720,w_1280,c_fill/f_webp",
@@ -113,13 +103,12 @@
   ],
   "brands": [
     {
-      
-      "brand": "Apples",
+      "brand": "Apple",
       "description": "abcd",
       "id": 1
     },
     {
-      "brand": "Samsungs",
+      "brand": "Samsung",
       "description": "bbbbb",
       "id": 2
     },
@@ -137,6 +126,11 @@
       "brand": "OPPO",
       "description": "vvvvvv",
       "id": 5
+    },
+    {
+      "brand": "OnePlus",
+      "description": "china brand",
+      "id": 6
     }
   ],
   "categories": [
@@ -157,13 +151,18 @@
     },
     {
       "category": "Shoes",
-      "description": "sssss",
+      "description": "aaaa",
       "id": 6
     },
     {
       "category": "Car",
       "description": "cccc",
       "id": 7
+    },
+    {
+      "category": "Phone",
+      "description": "abc",
+      "id": 8
     }
   ]
 }

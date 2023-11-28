@@ -11,7 +11,7 @@
 <!-- Category   -->
         <input class="form-input" type="text" 
                ngModel="{{productData.category}}"
-               name="category" placeholder="Enter Product category"
+               name="category" placeholder="Enter  category"
                #category="ngModel"
                pattern="(^[a-zA-Z ]*$)"
                required > 
@@ -23,7 +23,7 @@
         </div>
 
 <!-- Description -->
-        <textarea class="form-input" type="text" ngModel="{{productData.description}}"  name="description" placeholder="Enter Product Description" 
+        <textarea class="form-input" type="text" ngModel="{{productData.description}}"  name="description" placeholder="Enter  Description" 
                   required="description" #description="ngModel" ></textarea>
       
         <div *ngIf="description.invalid && (description.dirty || description.touched )" class="invalid-input">

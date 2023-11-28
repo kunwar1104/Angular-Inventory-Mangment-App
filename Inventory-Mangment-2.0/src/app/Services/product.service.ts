@@ -48,11 +48,12 @@ export class ProductService {
   getProduct(id: string){
     return this.http.get<product>(`http://localhost:3000/products/${id}`);
   }
-  updateProduct(product: product) {
+  updateProduct(product: product,id:any) {
+    console.log(product)
     this.showLoader()
-    return this.http.put<product>(`http://localhost:3000/products/${product.id}`, product).pipe(map((response: any) => {
+    return this.http.patch<product>(`http://localhost:3000/products/${id}`, product).pipe(map((response: any) => {
       this.hideLoader()  
-      console.log(response)
+      console.log("response from api pupdate =",response)
       return response || {}
     }))
   }

@@ -1,7 +1,9 @@
 <div class="add-product">
     <p class="error">{{updatedMessage}}</p>
-
-<form [formGroup]="addProduct" class="commen-form" (ngSubmit)="submit(addProduct)">
+    
+      
+      
+<form [formGroup]="addProduct" class="commen-form" (ngSubmit)="submit(addProduct.value)">
     <label class="title">Update Product</label>
     
 <!-- Product Name -->
@@ -47,9 +49,8 @@
 <!-- Color -->
     <input class="form-input" type="text" id="color" formControlName="color" placeholder="Please Enter Color"
         required>
-    <div class="invalid-input"
-        *ngIf="addProduct.get('color').hasError('required') && addProduct.get('color').touched">Color is required
-    </div>
+    <div class="invalid-input" *ngIf="addProduct.get('color').hasError('required') && addProduct.get('color').touched">Color is required </div>
+    <div class="invalid-input" *ngIf="addProduct.get('color').hasError('alphabetOnly') && addProduct.get('color').touched">Color should be a Aplhabat </div>
 
 <!-- Description -->
     <textarea class="form-input" type="text" id="description" formControlName="description" name="description"

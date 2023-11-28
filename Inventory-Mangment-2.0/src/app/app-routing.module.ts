@@ -7,6 +7,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './Services/auth.guard';
 import { homeGuard } from './Services/home.guard';
+import { SidebarDemoComponent } from './sidebar-demo/sidebar.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,9 @@ const routes: Routes = [
   {
     path: 'loader', component: LoaderComponent
   },  
+  {
+    path: 'demo-sidebar', component : SidebarDemoComponent
+  },
   {
     path: '**',
     redirectTo: 'login',

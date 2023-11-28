@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   z-index: 9999;
-  margin-top: 20px;
+  margin-top: 50px;
   // position: relative;
   // margin-top: -550px;
   // transform: translateY(-550px);
@@ -95,4 +95,8 @@
   // margin-left: 20px;
   // margin-bottom: 20px;
 
+}
+
+.red-color{
+  background: var(--bs-secondary-color);
 }

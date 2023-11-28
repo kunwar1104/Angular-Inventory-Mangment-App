@@ -72,11 +72,11 @@ export class AddProductComponent {
 
 
     this.addProduct = new FormGroup({
-      name: new FormControl ('', [Validators.required, ]),
+      name: new FormControl ('', [Validators.required,alphabetOnly ]),
       brand: new FormControl ('', [Validators.required, alphabetOnly ]  ), //this.nameValidator()
       price: new FormControl ('',[Validators.required, numberOnly  ]), 
       category: new FormControl  ('',[Validators.required,]  ),
-      color: new FormControl ('',[Validators.required]),
+      color: new FormControl ('',[Validators.required, alphabetOnly]),
       description : new FormControl ('', [Validators.required]),
       // image : new FormControl (null, [Validators.required , this.imageTypeValidator    ]),
       image:new FormControl (null, [Validators.required])

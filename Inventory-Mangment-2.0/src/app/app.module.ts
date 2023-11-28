@@ -28,7 +28,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
         AppComponent,
         LoginComponent,
         NotificationComponent,
-        LoaderComponent
+        LoaderComponent,
+        
 
       
         

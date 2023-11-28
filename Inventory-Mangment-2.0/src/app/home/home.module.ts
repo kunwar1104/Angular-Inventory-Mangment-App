@@ -29,6 +29,7 @@ import { ProdutUpdateComponent } from './produt-update/produt-update.component';
 import { DemoSidbarComponent } from './demo-sidbar/demo-sidbar.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NewSidebarComponent } from './new-sidebar/new-sidebar.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     CategoryAddComponent,
     ProdutUpdateComponent,
     DemoSidbarComponent,
+    NewSidebarComponent,
     // LoaderComponent
     
   ],
